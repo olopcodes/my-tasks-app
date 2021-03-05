@@ -18,8 +18,8 @@
       <div class="main-list">
         <h2>My List</h2>
         <ul class="main-list__container">
-          <li>code</li>
-          <li>roast cauliflower</li>
+          <!-- <li>code</li>
+          <li>roast cauliflower</li> -->
         </ul>
         <form id="main-list__form">
           <input type="text" id="main-list__input" name="mainText" />
@@ -28,21 +28,28 @@
       </div>
 
       <div class="task-details">
-        <h2 class="task-details__heading">code</h2>
-        <div class="task-details__container">
-            <label>
-                <input type="checkbox" id="hide-complete" />
-                code my task app
-              </label>
-              <label>
-                <input type="checkbox" id="hide-complete" />
-                build the website
-              </label>
+        <h2 class="task-details__heading">
+          CODE <span class="task-left">4 Tasks Left</span>
+        </h2>
+        <ul class="task-details__container">
+          <label>
+            <input type="checkbox" id="hide-complete" />
+            code my task app
+          </label>
+          <label>
+            <input type="checkbox" id="hide-complete" />
+            build the website
+          </label>
         </ul>
         <form id="task-details__form">
-          <input type="text" id="task-details__input" name="detailsText"/>
+          <input type="text" id="task-details__input" name="detailsText" />
           <button name="detailsBtn"><i class="fas fa-paper-plane"></i></button>
         </form>
+        <div class="task-details__btns">
+          <button id="reset">reset completed</button>
+          <button id="hide">hide completed</button>
+          <button id="delete">delete list</button>
+        </div>
       </div>
     </div>
     <script src="./js/app.js"></script>
