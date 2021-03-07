@@ -27,31 +27,32 @@
         </form>
       </div>
 
-      <div class="task-details">
-        <h2 class="task-details__heading">
-          CODE <span class="task-left">4 Tasks Left</span>
-        </h2>
-        <ul class="task-details__container">
-          <label>
+      <div class="task-list">
+        <div class="task-list__heading">
+          <h2>buy food</h2>
+          <span>4 Tasks Left</span>
+        </div>
+        <div class="task-list__container">
+          <!-- <label>
             <input type="checkbox" id="hide-complete" />
             code my task app
           </label>
           <label>
             <input type="checkbox" id="hide-complete" />
             build the website
-          </label>
-        </ul>
-        <form id="task-details__form">
-          <input type="text" id="task-details__input" name="detailsText" />
-          <button name="detailsBtn"><i class="fas fa-paper-plane"></i></button>
+          </label> -->
+        </div>
+        <form id="task-list__form">
+          <input type="text" id="task-list__input" name="listText" />
+          <button name="listBtn"><i class="fas fa-paper-plane"></i></button>
         </form>
-        <div class="task-details__btns">
+        <div class="task-list__btns">
           <button id="reset">reset completed</button>
-          <button id="hide">hide completed</button>
           <button id="delete">delete list</button>
         </div>
       </div>
     </div>
+    <script src="js/task-functions.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
