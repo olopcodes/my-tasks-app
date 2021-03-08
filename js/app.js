@@ -6,6 +6,7 @@ const taskListHeading = document.querySelector(".task-list__heading h2");
 const taskListHeadingSpan = document.querySelector(".task-list__heading span");
 const taskListContainer = document.querySelector(".task-list__container");
 const taskListBtns = document.querySelector(".task-list__btns");
+let isHidden = false;
 const data = getSavedData();
 
 // events

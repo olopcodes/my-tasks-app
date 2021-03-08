@@ -72,6 +72,7 @@ const populateTaskInfo = (title) => {
   } else if (title.tasks.length > 0) {
     handleTaskInfo(title);
   }
+  isHidden = false;
 };
 
 const showMainTitle = () => {
