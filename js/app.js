@@ -1,6 +1,6 @@
 "use strict";
-const mainListForm = document.querySelector("#main-list__form");
-const taskListForm = document.querySelector("#task-list__form");
+const mainListForm = document.querySelector(".main-list__form");
+const taskListForm = document.querySelector(".task-list__form");
 const mainListContainer = document.querySelector(".main-list__container");
 const taskListHeading = document.querySelector(".task-list__heading h2");
 const taskListHeadingSpan = document.querySelector(".task-list__heading span");

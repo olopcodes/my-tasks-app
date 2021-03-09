@@ -11,9 +11,13 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>My Tasks</h1>
+    <div class="page-heading">
+      <h1>My Tasks</h1>
+      <h4>Inputs must be TEXT and at least 3 characters</h4>
+    </div>
     <div class="container">
       <div class="main-list">
         <h2>My List</h2>
@@ -21,9 +25,16 @@
           <!-- <li>code</li>
           <li>roast cauliflower</li> -->
         </ul>
-        <form id="main-list__form">
-          <input type="text" id="main-list__input" name="mainText" />
-          <button name="mainBtn"><i class="fas fa-paper-plane"></i></button>
+        <form class="main-list__form">
+          <button name="mainBtn">+</button>
+
+          <input
+            type="text"
+            id="main-list__input"
+            name="mainText"
+            placeholder="Enter new list name"
+            autocomplete="off"
+          />
         </form>
       </div>
 
@@ -40,11 +51,23 @@
           <label>
             <input type="checkbox" id="hide-complete" />
             build the website
-          </label> -->
-        </div>
-        <form id="task-list__form">
-          <input type="text" id="task-list__input" name="listText" />
-          <button name="listBtn"><i class="fas fa-paper-plane"></i></button>
+          </label> 
+        <label class="label-container">Two
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        
+        --></div>
+        <form class="task-list__form">
+          <button name="listBtn">+</button>
+
+          <input
+            type="text"
+            placeholder="Enter new task"
+            id="task-list__input"
+            name="listText"
+            autocomplete="off"
+          />
         </form>
         <div class="task-list__btns">
           <button id="reset">reset completed</button>
