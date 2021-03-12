@@ -39,10 +39,15 @@ const createMainTaskElement = (text) => {
   li.textContent = text;
   li.addEventListener("click", (e) => {
     // use the info from here to populate the tasks
+    document.querySelector(".task-list").classList.add("show");
     populateTaskInfo(findTitle(li.textContent));
   });
   mainListContainer.appendChild(li);
 };
+
+// const markCompleted = () => {
+
+// }
 
 const getTasksLeft = (title) => {
   const tasksLeft = title.tasks.filter((task) => !task.completed).length;

@@ -42,15 +42,31 @@ taskListForm.addEventListener("submit", (e) => {
   e.target.elements.listText.value = "";
 });
 
+// completed event listener
 taskListContainer.addEventListener("change", (e) => {
   const title = taskListHeading.textContent;
-  const textTask = e.target.closest("label").textContent.trim();
+  const taskLabel = e.target.closest("label");
+  const textTask = taskLabel.textContent.trim();
   const task = findTask(title, textTask);
   if (task) task.completed = !task.completed;
+  e.target.checked
+    ? taskLabel.classList.add("checked")
+    : taskLabel.classList.remove("checked");
   taskListHeadingSpan.textContent = getTasksLeft(findTitle(title));
 });
 
 taskListBtns.addEventListener("click", (e) => {
   if (e.target.id === "delete") deleteList();
   if (e.target.id === "reset") resetCompleted();
+});
+
+document.querySelector(".main-colors").addEventListener("click", (e) => {
+  const colorStyle = getComputedStyle(e.target);
+  if (e.target.classList.contains("color"))
+    document.querySelector("body").style.backgroundColor =
+      colorStyle.backgroundColor;
+  document
+    .querySelectorAll(".color")
+    .forEach((c) => c.classList.remove("clicked"));
+  e.target.classList.add("clicked");
 });
